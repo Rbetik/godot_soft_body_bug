@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 10, 10 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.917647, 0.027451, 0.027451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.847059, 0.847059, 0.847059, 1 )
+
+[node name="Scene_A" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.912335, 0.409445, 0, -0.409445, 0.912335, 0, 2.82107, 5.68737 )
+
+[node name="SoftBody" type="SoftBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04319, 0 )
+
+[node name="MeshInstance2" type="Label" parent="."]
+anchor_left = 0.146
+anchor_top = 0.07
+anchor_right = 0.309
+anchor_bottom = 0.238
+margin_left = 0.495987
+margin_right = -0.416016
+margin_bottom = 0.199982
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_styles/normal = SubResource( 3 )
+text = "SCENE A"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
